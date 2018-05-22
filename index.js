@@ -43,6 +43,9 @@ const organizeURLStatus = async (scrapedUrls) => {
   let stringified = await JSON.stringify(results, null, 2);
   let now = new Date();
 
+  // Check for 'results' directory or make new one
+  fs.existsSync('./results') || fs.mkdirSync('./results');
+
   let titlePrefix = wvCheck ? 'Worldview-' : 'Products-';
   let fileName = `./results/${titlePrefix}urlStatusCodeCheck-${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}.json`;
   fs.writeFile(fileName, stringified, 'utf8', function() {
