@@ -183,7 +183,9 @@ const scrape = async () => {
 };
 
 const scrapePageURLs = scrape().then((urlObject) => {
-    return urlObject;
+  return urlObject;
+}).catch((err) => {
+  console.log('ERROR: scrapePageURLs - ', err);
 });
 
 module.exports = scrapePageURLs;

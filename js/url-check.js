@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 
-// URL status check function makes get requests to provided list of URLs to get status codes / errors
+// URL status check function makes GET requests to provided list of URLs to get status codes / errors
 
 // Delay helper to prevent too many requests at once
 const sleeper = (ms) => (x) => new Promise(resolve => setTimeout(() => resolve(x), ms));
@@ -54,24 +54,24 @@ const getUrlLinks = async (linkList) => {
     }
    }
    searchNestedObject(linkList);
-   const checked = await requestCheck(urls);
-   return checked;
+   return urls;
 };
 
 // Get urls with errors/status codes organized into an object
 const	getURLStatusCodeCollection = async function(urls) {
 	const parsedUrls = await getUrlLinks(urls);
+  const checkStatus = await requestCheck(parsedUrls);
   // Log out number of links with errors/status codes
   console.log(`
 
 URL STATUSCODE RESULTS:
 ${'-'.repeat(66)}
-  ERRORS: ${parsedUrls['ERROR'].length}
+  ERRORS: ${checkStatus['ERROR'].length}
   STATUSCODE:`);
-  for(let code in parsedUrls['STATUSCODE']) {
-    console.log(`    ${code}: ${parsedUrls['STATUSCODE'][code].length}`);
+  for(let code in checkStatus['STATUSCODE']) {
+    console.log(`    ${code}: ${checkStatus['STATUSCODE'][code].length}`);
   }
-  return parsedUrls;
+  return checkStatus;
 };
 
 module.exports = getURLStatusCodeCollection;
