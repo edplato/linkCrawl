@@ -1,4 +1,4 @@
-name: Secrets Check
+name: Secrets Check - Commit
   
 on: [push]
 
