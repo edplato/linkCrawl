@@ -6,11 +6,14 @@ jobs:
   security-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Secret Scan
-        uses: max/secret-scan@1.0.0
+      - uses: actions/checkout@master
+      - name: gitleaks-action
+        uses: zricethezav/gitleaks@master
         with:
           run: |
-            trufflehog https://github.com/edplato/linkCrawl.git \
-            
-            
+            set -e
+            set -u
+            gitleaks -v --exclude-forks --redact --threads=1 \
+              --branch=$GITHUB_REF \
+              --repo-path=$GITHUB_WORKSPACE \
+              --commit=$GITHUB_SHA \
