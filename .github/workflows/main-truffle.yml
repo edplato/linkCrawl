@@ -8,9 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: trufflehog-action
-        uses: dxa4481/truffleHog@master
+        uses: dxa4481/truffleHog@dev
         with:
           run: |
-            set -u
             set -e
-            trufflehog asdasdasd \
+            trufflehog $GITHUB_WORKSPACE
