@@ -3,10 +3,9 @@ name: CI
 on: [push]
 
 jobs:
-  build:
-
+  security-check:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: eshork/gitleaks-action@v1.0.0
-    - name: gitleaks-action
+      - uses: actions/checkout@v1
+      - name: gitleaks-action
+        uses: eshork/gitleaks-action@v1.0.0
