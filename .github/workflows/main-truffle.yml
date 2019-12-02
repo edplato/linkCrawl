@@ -11,5 +11,6 @@ jobs:
         uses: dxa4481/truffleHog@master
         with:
           run: |
+            set -u
             set -e
-            trufflehog --regex $GITHUB_WORKSPACE \
+            trufflehog \
