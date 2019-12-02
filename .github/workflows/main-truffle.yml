@@ -11,4 +11,6 @@ jobs:
       - name: trufflehog/action
         uses: dxa4481/truffleHog@dev
         with:
-          args: '$GITHUB_WORKSPACE'
+          entrypoint: |
+            set - e
+            trufflehog $GITHUB_WORKSPACE
