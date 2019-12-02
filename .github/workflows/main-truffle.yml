@@ -11,4 +11,4 @@ jobs:
       - name: trufflehog/action
         uses: dxa4481/truffleHog@dev
         with:
-          args: '$GITHUB_REPOSITORY'
+          args: $GITHUB_REPOSITORY
