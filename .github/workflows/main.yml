@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-        with:
-          repository: zricethezav/gitleaks
       - name: gitleaks-action
-        run: |
-          set -e
-          set -u
-          gitleaks -v --exclude-forks --redact --threads=1 \
-            --branch=$GITHUB_REF \
-            --repo-path=$GITHUB_WORKSPACE \
-            --commit=$GITHUB_SHA \
+        uses: zricethezav/gitleaks@master
+        with:
+          run: |
+            set -e
+            set -u
+            gitleaks -v --exclude-forks --redact --threads=1 \
+              --branch=$GITHUB_REF \
+              --repo-path=$GITHUB_WORKSPACE \
+              --commit=$GITHUB_SHA \
