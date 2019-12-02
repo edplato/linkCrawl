@@ -16,4 +16,3 @@ jobs:
             gitleaks -v --exclude-forks --redact --threads=1 \
               --branch=$GITHUB_REF \
               --repo-path=$GITHUB_WORKSPACE \
-              --commit=$GITHUB_SHA \
