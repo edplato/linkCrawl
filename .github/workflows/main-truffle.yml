@@ -1,13 +1,13 @@
 name: Secrets Check - Commit
   
-on: [pull_request]
+on: [push]
 
 jobs:
   security-check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: gitleaks-action
+      - name: trufflehog-action
         uses: dxa4481/truffleHog@master
         with:
           run: |
