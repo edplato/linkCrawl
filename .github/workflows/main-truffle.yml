@@ -1,0 +1,15 @@
+name: Secrets Check - Commit
+  
+on: [pull_request]
+
+jobs:
+  security-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: gitleaks-action
+        uses: dxa4481/truffleHog@master
+        with:
+          run: |
+            set -e
+            trufflehog --regex --since_commit $GITHUB_SHA \
