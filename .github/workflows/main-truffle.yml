@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - run: 'echo $GITHUB_WORKSPACE'
       - name: trufflehog/action
         uses: dxa4481/truffleHog@dev
         with:
