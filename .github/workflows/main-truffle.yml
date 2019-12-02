@@ -1,14 +1,11 @@
 name: Secrets Check - Commit
   
-on: [pull_request]
+on: [push]
 
 jobs:
   security-check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - run: 'echo $GITHUB_WORKFLOW $GITHUB_ACTION $GITHUB_REPOSITORY $GITHUB_EVENT_NAME $GITHUB_EVENT_PATH $GITHUB_WORKSPACE $GITHUB_SHA $GITHUB_REF'
       - name: gitleaks-action
         uses: eshork/gitleaks-action@v1.0.0
-        with:
-            args: --commit=$GITHUB_SHA
