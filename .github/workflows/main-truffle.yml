@@ -7,8 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: dxa4481/truffleHog@dev
-        with: 
-          run: |
+      - name: trufflehog/action
+        uses: dxa4481/truffleHog@dev
+      - name: Run trufflehog on commit
+        run: |
             set -e
             trufflehog $GITHUB_WORKSPACE
