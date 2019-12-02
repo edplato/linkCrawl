@@ -12,4 +12,4 @@ jobs:
         with:
           run: |
             set -e
-            trufflehog --regex --since_commit $GITHUB_SHA \
+            trufflehog --regex --since_commit $GITHUB_SHA $GITHUB_WORKSPACE \
