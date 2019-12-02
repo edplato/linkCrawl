@@ -1,7 +1,4 @@
 name: Secrets Check
-
-env:
-  GITHUB_SHA: ${{ github.sha }}
   
 on: [push]
 
@@ -9,9 +6,8 @@ jobs:
   security-check:
     runs-on: ubuntu-latest
     steps:
-      - run: 'echo $GITHUB_SHA'
       - uses: actions/checkout@v1
       - name: gitleaks-action
         uses: eshork/gitleaks-action@v1.0.0
         with:
-          args: --commit=$GITHUB_SHA
+          args: '--commit=$GITHUB_SHA'
