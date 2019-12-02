@@ -10,4 +10,4 @@ jobs:
       - name: trufflehog/action
         uses: dxa4481/truffleHog@dev
         with:
-          args: $GITHUB_WORKSPACE
+          args: '$GITHUB_WORKSPACE'
