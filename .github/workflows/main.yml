@@ -1,5 +1,8 @@
-name: CI
+name: Secrets Check
 
+env:
+  GITHUB_SHA: ${{ github.sha }}
+  
 on: [push]
 
 jobs:
