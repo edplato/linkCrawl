@@ -13,4 +13,4 @@ jobs:
       - name: gitleaks-action
         uses: eshork/gitleaks-action@v1.0.0
         with:
-          args: "--commit=$GITHUB_SHA"
+          args: --commit=$GITHUB_SHA
