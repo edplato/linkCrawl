@@ -13,4 +13,4 @@ jobs:
           run: |
             set -u
             set -e
-            trufflehog \
+            trufflehog asdasdasd \
