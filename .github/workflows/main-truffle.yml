@@ -10,7 +10,5 @@ jobs:
       - run: 'echo $GITHUB_REPOSITORY'
       - name: trufflehog/action
         uses: dxa4481/truffleHog@dev
-        env:
-          repo: $GITHUB_REPOSITORY
         with:
-          args: repo
+          entrypoint: 'trufflehog $GITHUB_REPOSITORY'
