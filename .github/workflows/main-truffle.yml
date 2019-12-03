@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@master
       - name: echo
         run: 'echo $GITHUB_REF $GITHUB_WORKSPACE $GITHUB_SHA'
-      - name: gitleaks-action
-        uses: zricethezav/gitleaks@master
+      - name: trufflehog-action
+        uses: dxa4481/truffleHog
         with:
          entrypoint: ./entryoveride.sh
