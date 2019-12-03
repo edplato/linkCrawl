@@ -9,6 +9,8 @@ jobs:
       - uses: actions/checkout@master
       - name: echo
         run: 'echo $GITHUB_REF $GITHUB_WORKSPACE $GITHUB_SHA'
+      - name: echo workspace
+        run: 'ls $GITHUB_WORKSPACE'
       - name: trufflehog-action
         uses: dxa4481/truffleHog@master
         with:
