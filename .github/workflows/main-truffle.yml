@@ -9,11 +9,5 @@ jobs:
       - uses: actions/checkout@master
       - name: gitleaks-action
         uses: zricethezav/gitleaks@master
-      - name: run gitleaks
-        run: |
-          set -e
-          set -u
-          gitleaks -v --exclude-forks --redact --threads=1 \
-            --branch=$GITHUB_REF \
-            --repo-path=$GITHUB_WORKSPACE \
-            --commit=$GITHUB_SHA \
+        with:
+         entrypoint: ./entryoveride.sh
