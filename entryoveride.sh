@@ -1,4 +1,3 @@
 #!/usr/bin/env sh
 set -e # Abort script at first error
-echo 'test override'
-trufflehog --regex --entropy=False $GITHUB_WORKSPACE
+trufflehog --regex --entropy=False --since_commit $GITHUB_SHA $GITHUB_WORKSPACE
