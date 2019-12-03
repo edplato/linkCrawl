@@ -10,4 +10,4 @@ jobs:
       - name: gitleaks-action
         uses: zricethezav/gitleaks@master
         with:
-         entrypoint: /entryoveride.sh
+         entrypoint: ./entryoveride.sh
