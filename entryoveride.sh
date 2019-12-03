@@ -7,3 +7,4 @@ set -u # nounset - Attempt to use undefined variable outputs error message, and 
 gitleaks -v --redact --threads=1 \
   --branch=$GITHUB_REF \
   --repo-path=$GITHUB_WORKSPACE \
+  --commit=$GITHUB_SHA \
