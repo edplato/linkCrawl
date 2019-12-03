@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - name: echo
+        run: 'echo $GITHUB_REF $GITHUB_WORKSPACE $GITHUB_SHA'
       - name: gitleaks-action
         uses: zricethezav/gitleaks@master
         with:
