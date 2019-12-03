@@ -1,3 +1,5 @@
 #!/usr/bin/env sh
 set -e # Abort script at first error
-trufflehog --regex --entropy=True https://github.com/edplato/linkCrawl
+githubRepo="https://github.com/${$GITHUB_REPOSITORY}"
+echo "$githubRepo"
+trufflehog --regex --entropy=True $githubRepo
