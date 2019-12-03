@@ -10,7 +10,8 @@ jobs:
       - name: gitleaks-action
         uses: zricethezav/gitleaks@master
         with:
-          run: |
+          entrypoint: /bin/echo
+          args: |
             set -e
             set -u
             gitleaks -v --exclude-forks --redact --threads=1 \
