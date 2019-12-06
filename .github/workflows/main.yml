@@ -1,12 +1,11 @@
-name: CI
-
+name: Secrets Check - Commit
+  
 on: [push]
 
 jobs:
-  build:
-
+  security-check:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: eshork/gitleaks-action@v1.0.0
-    - name: gitleaks-action
+      - uses: actions/checkout@master
+      - name: Trufflehog Actions Scan test
+        uses: edplato/trufflehog-actions-scan@master
