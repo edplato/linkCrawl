@@ -8,4 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Trufflehog Actions Scan test
-        uses: edplato/trufflehog-actions-scan@master
+        uses: edplato/trufflehog-actions-scan@test-priv-pr
+        with:
+          githubToken: ${{ secrets.GITHUB_CLONE_TOKEN }}
