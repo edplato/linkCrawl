@@ -10,5 +10,5 @@ jobs:
       - name: Trufflehog Actions Scan test
         uses: edplato/trufflehog-actions-scan@test-priv-pr
         with:
-          githubToken: ${{ secrets.GITHUB_CLONE_TOKEN }}
+          githubToken: "test123"
           scanArguments: "--regex --entropy=False --max_depth=13"
