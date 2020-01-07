@@ -1,6 +1,6 @@
 {
   "name": "linkCrawl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scrape site for urls to check status using Chromium and JSON fs.",
   "main": "index.js",
   "scripts": {
