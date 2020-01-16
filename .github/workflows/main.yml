@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Trufflehog Actions Scan test
-        uses: nasa-gibs/trufflehog-actions-scan@master
+        uses: edplato/trufflehog-actions-scan@master
         with:
           githubToken: ${{ secrets.GITHUB_CLONE_TOKEN }}
           scanArguments: "--regex --entropy=False --max_depth=13"
