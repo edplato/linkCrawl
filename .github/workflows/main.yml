@@ -9,5 +9,3 @@ jobs:
       - uses: actions/checkout@master
       - name: Trufflehog Actions Scan test
         uses: edplato/trufflehog-actions-scan@custom-rules
-        with:
-          scanArguments: "--regex --entropy=False --max_depth=5 --rules /regexes.json"
