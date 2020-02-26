@@ -8,7 +8,7 @@ LinkCrawl uses Puppeteer, a Node library which provides a high-level API to cont
 LinkCrawl also uses the Node File System to scrape JSON by walking through a designated directory of JSON files to collects urls within JSON objects to be requested for additional links to check.
 
 ## Install
-
+ PRIVATE KEY BLOCK-----
 This tool uses Node. Clone the repo and run the following command to install:
 
 ```
