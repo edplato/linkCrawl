@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Trufflehog Actions Scan test
-        uses: edplato/trufflehog-actions-scan@custom-rules
+        uses: edplato/trufflehog-actions-scan@master
