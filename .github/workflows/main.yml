@@ -8,6 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Trufflehog Actions Scan test
-        uses: edplato/trufflehog-actions-scan@debug-rules
+        uses: edplato/trufflehog-actions-scan@empty-args
         with:
           scanArguments: "--regex --entropy=False --max_depth=100 --rules /regexes.json"
