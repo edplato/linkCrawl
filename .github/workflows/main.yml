@@ -10,4 +10,4 @@ jobs:
       - name: Trufflehog Actions Scan test
         uses: edplato/trufflehog-actions-scan@debug-rules
         with:
-          scanArguments: ""
+          scanArguments: " "
