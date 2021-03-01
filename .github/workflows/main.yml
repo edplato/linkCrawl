@@ -7,5 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Trufflehog Actions Scan test
+      - name: Trufflehog Actions Scan
         uses: edplato/trufflehog-actions-scan@gr-check-10
