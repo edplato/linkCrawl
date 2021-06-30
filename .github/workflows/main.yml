@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Trufflehog Actions Scan
-        uses: edplato/trufflehog-actions-scan@qs-investigate
+        uses: edplato/trufflehog-actions-scan@revert-repo-clone
