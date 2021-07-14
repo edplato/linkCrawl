@@ -9,3 +9,5 @@ jobs:
       - uses: actions/checkout@master
       - name: Trufflehog Actions Scan
         uses: edplato/trufflehog-actions-scan@master
+        with:
+          scanArguments: " "
