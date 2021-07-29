@@ -1,6 +1,9 @@
 name: Create release
 
-on: pull_request
+on:
+  push:
+    tags:
+      - "v*" # Push events to matching v*, i.e. v1.0, v20.15.10
 
 jobs:
   build:
@@ -38,7 +41,7 @@ jobs:
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: master
+          branch: main
           force: true
       - name: "Prepare for the Github Release"
         id: generate-release-changelog
