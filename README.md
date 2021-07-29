@@ -10,7 +10,6 @@ LinkCrawl also uses the Node File System to scrape JSON by walking through a des
 ## Install
 
 This tool uses Node. Clone the repo and run the following command to install:
-
 ```
 npm install
 ```
@@ -22,13 +21,11 @@ Scraping urls and making requests to check each url status will take some time t
 **The two main functions of LinkCrawl, using Puppeteer and reading JSON files, are separated into two scripts:**
 
 *To scrape urls and check their status for the Worldview site:*
-
 ```
 npm run scrapewv
 ```
 
 *To scrape JSON products used in Worldview:*
-
 ```
 npm run scrapeprod
 ```
