@@ -168,7 +168,6 @@ const scrape = async () => {
       }, {}));
 
     browser.close();
-
     // return array of links for layers, events (all three projections), and about
     return {
       EVENTS: eventsLinks,
