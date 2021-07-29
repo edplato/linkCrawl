@@ -13,6 +13,7 @@ const scrape = async () => {
     // ****************************************
     // PAGE INIT
     // ****************************************
+
     // loads page
     await page.goto('https://worldview.earthdata.nasa.gov/');
     await page.setViewport({width: 1920, height: 1080});
@@ -24,6 +25,7 @@ const scrape = async () => {
     // ****************************************
     // NATURAL EVENTS LINKS
     // ****************************************
+
     // Events links are saved in an object with a key value pair of link text and href:
     // 'Tye River Fire - Thursday, May 3': 'http://inciweb.nwcg.gov/incident/5783/'
 
@@ -50,7 +52,7 @@ const scrape = async () => {
     // 'MODIS (Terra and Aqua) Combined Value-Added Aerosol Optical Depth': [ [Object], [Object] ],
 
     // Each link Object contains the link text and href:
-    // {'NASA Earthdata - NRT Value-Added MODIS AOD Product': 'https://earthdata.nasa.gov/earth-observation-data/near-real-time/nrt-value-added-modis-aerosol-optical-depth-product-available'}
+    // {'NASA EarthData - NRT Value-Added MODIS AOD Product': 'https://earthdata.nasa.gov/earth-observation-data/near-real-time/nrt-value-added-modis-aerosol-optical-depth-product-available'}
 
     // handles click events for accessing layers
 
