@@ -17,7 +17,7 @@
   "dependencies": {
     "cli-spinner": "^0.2.8",
     "node-fetch": "^2.6.1",
-    "puppeteer": "^1.4.0",
+    "puppeteer": "^1.13.0",
     "read-file-async": "^1.0.0"
   }
 }
