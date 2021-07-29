@@ -2,9 +2,6 @@ name: Changelog CI
 
 # Controls when the action will run. Triggers the workflow on a pull request
 on:
-  pull_request:
-    branches: [ master ]
-    types: [ opened, reopened ]
   push:
     branches: [ master ]
 
