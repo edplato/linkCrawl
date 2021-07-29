@@ -3,7 +3,10 @@ name: Changelog CI
 # Controls when the action will run. Triggers the workflow on a pull request
 on:
   pull_request:
+    branches: [ master ]
     types: [ opened, reopened ]
+  push:
+    branches: [ master ]
 
 jobs:
   build:
@@ -18,11 +21,5 @@ jobs:
         with:
           changelog_filename: CHANGELOG.md
           config_file: changelog-ci-config.yml
-          # Add this if you are using it on a private repository
-          # Or if you have turned on commenting through the config file.
-          # Optional, This will be used to configure git
-          # defaults to `github-actions[bot]` if not provided.
-          committer_username: 'test'
-          committer_email: 'test@test.com'
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
