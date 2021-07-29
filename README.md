@@ -19,7 +19,7 @@ npm install
 
 ## Usage
 
-Scraping urls and making requests to check each url status will take some time to completed. Runs can take over ten minutes to complete and provide an exported JSON file with the results. Delays are also added to the code to prevent too many simultaneous requests.  
+Scraping urls and making requests to check each url status will take some time to completed. Runs can take over ten minutes to complete and provide an exported JSON file with results. Delays are also added to the code to prevent too many simultaneous requests.  
 
 **The two main functions of LinkCrawl, using Puppeteer and reading JSON files, are separated into two scripts:**
 
