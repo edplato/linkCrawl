@@ -3,7 +3,6 @@ const puppeteer = require('puppeteer');
 // Puppeteer is a Node library which provides a high-level API
 // to control headless Chrome or Chromium over the DevTools Protocol.
 // It can also be configured to use full (non-headless) Chrome or Chromium.
-
 // Scrape function crawls page through determined click events and collects links
 
 const scrape = async () => {
@@ -14,7 +13,6 @@ const scrape = async () => {
     // ****************************************
     // PAGE INIT
     // ****************************************
-
     // loads page
     await page.goto('https://worldview.earthdata.nasa.gov/');
     await page.setViewport({width: 1920, height: 1080});
@@ -26,7 +24,6 @@ const scrape = async () => {
     // ****************************************
     // NATURAL EVENTS LINKS
     // ****************************************
-
     // Events links are saved in an object with a key value pair of link text and href:
     // 'Tye River Fire - Thursday, May 3': 'http://inciweb.nwcg.gov/incident/5783/'
 
