@@ -1,0 +1,28 @@
+name: Changelog CI
+
+# Controls when the action will run. Triggers the workflow on a pull request
+on:
+  pull_request:
+    types: [ opened, reopened ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository
+      - uses: actions/checkout@v2
+
+      - name: Run Changelog CI
+        uses: saadmk11/changelog-ci@v0.8.0
+        with:
+          changelog_filename: CHANGELOG.md
+          config_file: changelog-ci-config.yml
+          # Add this if you are using it on a private repository
+          # Or if you have turned on commenting through the config file.
+          # Optional, This will be used to configure git
+          # defaults to `github-actions[bot]` if not provided.
+          committer_username: 'test'
+          committer_email: 'test@test.com'
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
