@@ -11,7 +11,7 @@ LinkCrawl also uses the Node File System to scrape JSON by walking through a des
 
 ## Install
 
-This tool uses Node JS. Clone the repo and run the following command to install :
+This tool uses Node JS. Clone the repo and run the following command to install:
 ```
 npm install
 ```
@@ -19,7 +19,7 @@ npm install
 
 ## Usage
 
-Scraping urls and making requests to check each url status will take some time to completed. Runs can take over ten minutes to complete and provide an exported JSON file with results. Delays are also added to the code to prevent too many simultaneous requests.  
+Scraping urls and making requests to check each url status will take some time to completed. Runs can take over ten minutes to complete and provide an exported JSON file with results. Delays are also added to the code to prevent too many simultaneous requests .  
 
 **The two main functions of LinkCrawl, using Puppeteer and reading JSON files, are separated into two scripts:**
 
