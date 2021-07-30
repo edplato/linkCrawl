@@ -11,7 +11,7 @@ LinkCrawl also uses the Node File System to scrape JSON by walking through a des
 
 ## Install
 
-This tool uses Node JS. Clone the repo and run the following command to install:
+This tool uses Node JS. Clone the repo and run the following command to install :
 ```
 npm install
 ```
