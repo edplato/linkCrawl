@@ -6,7 +6,7 @@
 
 LinkCrawl uses Puppeteer, a Node library which provides a high-level API to control headless Chrome or Chromium over the DevTools Protocol. It can also be configured to use full (non-headless) Chrome or Chromium (see line 10 in scrape.js). The Puppeteer functionality of LinkCrawl is used to navigate through the DOM triggering elements for the availability of urls to be collected.
 
-LinkCrawl also uses the Node File System to scrape JSON by walking through a designated directory of JSON files to collects urls within JSON objects to be requested for additional links to check .
+LinkCrawl also uses the Node File System to scrape JSON by walking through a designated directory of JSON files to collects urls within JSON objects to be requested for additional links to check.
 
 
 ## Install
