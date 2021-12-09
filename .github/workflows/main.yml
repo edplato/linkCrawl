@@ -6,8 +6,12 @@ jobs:
   security-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: Trufflehog Actions Scan
-        uses: edplato/trufflehog-actions-scan@master
-        with:
-          scanArguments: "--regex --entropy=False --max_depth=500"
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: trufflehog-actions-scan
+      uses: edplato/trufflehog-actions-scan@pr-15-tr
+      with:
+        scanArguments: "--regex --entropy=False --max_depth=500"
+
+
