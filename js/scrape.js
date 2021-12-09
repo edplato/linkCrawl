@@ -17,7 +17,7 @@ const scrape = async () => {
     // loads page
     await page.goto('https://worldview.earthdata.nasa.gov/');
     await page.setViewport({width: 1920, height: 1080});
-    await page.waitFor(4000);
+    await page.waitFor(5000);
     // skips tour
     await page.click('#skipTour');
     await page.waitFor(1000);
