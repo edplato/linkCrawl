@@ -10,7 +10,7 @@ jobs:
       with:
         fetch-depth: "0"
     - name: trufflehog-actions-scan
-      uses: edplato/trufflehog-actions-scan@pr-15-tr
+      uses: edplato/trufflehog-actions-scan@master
       with:
         scanArguments: "--regex --entropy=true --max_depth=1000"
 
