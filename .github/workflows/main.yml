@@ -8,9 +8,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        fetch-depth: "0"
-    - run: ls -laR
+        fetch-depth: 0
     - name: trufflehog-actions-scan
       uses: edplato/trufflehog-actions-scan@master
       with:
-        scanArguments: "--regex --entropy=true --max_depth=1000 --rules regexes.json"
+        scanArguments: "--regex --entropy=true --max_depth=1000"
