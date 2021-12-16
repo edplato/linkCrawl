@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        fetch-depth: 0
+        fetch-depth: "0"
     - name: trufflehog-actions-scan
       uses: edplato/trufflehog-actions-scan@pr-15-tr
       with:
