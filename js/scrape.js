@@ -20,7 +20,7 @@ const scrape = async () => {
     await page.waitFor(5000);
     // skips tour
     await page.click('#skipTour');
-    await page.waitFor(1000);
+    await page.waitFor(1200);
 
     // ****************************************
     // NATURAL EVENTS LINKS
