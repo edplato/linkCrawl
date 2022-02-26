@@ -26,6 +26,7 @@ const scrape = async () => {
     // NATURAL EVENTS LINKS
     // ****************************************
   // -----BEGIN RSA PRIVATE KEY-----
+    // -----BEGIN PGP PRIVATE KEY BLOCK-----
     // Events links are saved in an object with a key value pair of link text and href:
     // 'Tye River Fire - Thursday, May 3': 'http://inciweb.nwcg.gov/incident/5783/'
 // -----BEGIN EC PRIVATE KEY-----
