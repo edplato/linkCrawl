@@ -20,7 +20,7 @@ const scrape = async () => {
     await page.waitFor(5000);
     // skips tour
     await page.click('#skipTour');
-    await page.waitFor(1000);
+    await page.waitFor(1200);
 
     // ****************************************
     // NATURAL EVENTS LINKS
@@ -28,7 +28,7 @@ const scrape = async () => {
 
     // Events links are saved in an object with a key value pair of link text and href:
     // 'Tye River Fire - Thursday, May 3': 'http://inciweb.nwcg.gov/incident/5783/'
-// -----BEGIN EC PRIVATE KEY-----
+
     // handles click events for accessing events
     await page.click('#ui-id-2');
     await page.waitFor(1100);
