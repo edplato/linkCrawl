@@ -32,7 +32,7 @@ const scrape = async () => {
 // -----BEGIN EC PRIVATE KEY-----
     // handles click events for accessing events
     await page.click('#ui-id-2');
-    await page.waitFor(1200);
+    await page.waitFor(1100);
     // scrapes all natural event links
     const eventsLinks = await page.$$eval('.natural-event-link', links => links.reduce((combined, link) => {
         let href = link.href;
