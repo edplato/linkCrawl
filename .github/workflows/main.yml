@@ -1,6 +1,6 @@
 name: Secrets Check - Commit
   
-on: [push]
+on: [push, pull_request]
 
 jobs:
   security-check:
@@ -12,4 +12,5 @@ jobs:
     - run: ls -laR
     - uses: edplato/trufflehog-actions-scan@master
       with:
-        scanArguments: "--regex --entropy=true --max_depth=1000"
+        scanArguments: "--regex --entropy=false --max_depth=5"
+  
