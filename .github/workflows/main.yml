@@ -8,7 +8,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
+        submodules: false
         fetch-depth: "0"
+        ref: ${{ github.head_ref }}
     - run: ls -laR
     - uses: edplato/trufflehog-actions-scan@master
       with:
